@@ -1,0 +1,54 @@
+/*** Fonts ***/
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*** Preset ***/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+/*** Variables ***/
+:root {
+    --font-primary: 'Roboto', sans-serif;
+    --color-primary: #4a4ce2;
+    --color-secondary: #50E3C2;
+    --color-text: #333333;
+    --color-background: #FFFFFF;
+
+    --xs: .8rem;
+    --s: 1.6rem;
+    --m: 2.2rem;
+    --l: 2.8rem;
+    --xl: 3.6rem;
+
+    --title-font: "Raleway", sans-serif;
+    --body-font: "Lexend Deca", sans-serif;
+}
+.dark-theme {
+    --color-background: #121212;
+    --color-text: #eeeeee;
+    --color-primary: #9a8af8;
+    --color-secondary: #03dac6;
+    --color-border: #333333;
+}
+
+/*** Basis ***/
+body{
+    font-family: var(--body-font);
+    font-size: 1.6rem;
+}
+h1,h2,h3,th{
+    font-family: var(--title-font);
+}
+h1{
+    font-size: var(--l);
+}
+h2{
+    font-size: var(--m);
+}
+h3{
+    font-size: var(--s);
+}
