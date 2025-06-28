@@ -73,7 +73,9 @@ h3{
     --thumb-size: 18px;
     --switch-padding: 3px;
 }
-
+body{
+    transition: background .3s ease-in, color 5s ease-in;
+}
 .switch-theme {
     position: relative;
     display: inline-block;
