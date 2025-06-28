@@ -25,6 +25,7 @@ html{
     --color-secondary-darked: #3baa92;
     --color-text: #333333;
     --color-background: #FFFFFF;
+    --color-neutral: #d2d6e2;
 
     --xs: .8rem;
     --s: 1.6rem;
@@ -38,7 +39,7 @@ html{
     --bar-l: 9rem;
 }
 .dark-theme {
-    --color-background: #121212;
+    --color-background: #18181a;
     --color-text: #eee;
     --color-primary: #8867ff;
     --color-primary-darked: #6934fa;
@@ -80,7 +81,7 @@ h3{
     height: var(--switch-height);
 }
 
-.switch-theme input {
+#toggleTheme {
     opacity: 0;
     width: 0;
     height: 0;
@@ -93,7 +94,7 @@ h3{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: var(--color-neutral);
     border-radius: var(--switch-height);
     transition: background-color .4s;
     padding: var(--switch-padding);
@@ -112,11 +113,11 @@ h3{
     transition: transform .5s, background .2s;
 }
 
-.switch-theme input:checked + .slider::before {
+#toggleTheme:checked + .slider::before {
     transform: translateX(calc(var(--switch-width) - var(--thumb-size) - calc(var(--switch-padding) * 2)));
     background-color: var(--color-background);
 }
 
-.switch-theme input:checked+.slider {
-    background-color: #9a8af8;
+#toggleTheme:checked + .slider {
+    background-color: var(--color-primary);
 }
