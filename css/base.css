@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*** Preset ***/
+*{
+    padding: 0;
+    margin: 0;
+    height: 100%
+}
 html{
     font-size: 62.5%;
     box-sizing: border-box;
@@ -9,12 +14,15 @@ html{
 *, *::before, *::after{
     box-sizing: inherit;
 }
-
 /*** Variables ***/
 :root {
     --font-primary: 'Roboto', sans-serif;
-    --color-primary: #4a4ce2;
+    --font-title: "Raleway", sans-serif;
+    --font-body: "Lexend Deca", sans-serif;
+    --color-primary: #4f32f3;
+    --color-primary-darked: #3f27c5;
     --color-secondary: #50E3C2;
+    --color-secondary-darked: #3baa92;
     --color-text: #333333;
     --color-background: #FFFFFF;
 
@@ -23,25 +31,30 @@ html{
     --m: 2.2rem;
     --l: 2.8rem;
     --xl: 3.6rem;
+    --xxl: 4rem;
 
-    --title-font: "Raleway", sans-serif;
-    --body-font: "Lexend Deca", sans-serif;
+    --bar-s: 5rem;
+    --bar-m: 7rem;
+    --bar-l: 9rem;
 }
 .dark-theme {
     --color-background: #121212;
-    --color-text: #eeeeee;
-    --color-primary: #9a8af8;
+    --color-text: #eee;
+    --color-primary: #8867ff;
+    --color-primary-darked: #6934fa;
     --color-secondary: #03dac6;
-    --color-border: #333333;
+    --color-secondary-darked: #1db6a7;
 }
 
 /*** Basis ***/
 body{
-    font-family: var(--body-font);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-primary);
     font-size: 1.6rem;
 }
 h1,h2,h3,th{
-    font-family: var(--title-font);
+    font-family: var(--font-title);
 }
 h1{
     font-size: var(--l);
@@ -51,4 +64,59 @@ h2{
 }
 h3{
     font-size: var(--s);
+}
+/*** Dark Mode Switch ***/
+:root {
+    --switch-width: 50px;
+    --switch-height: 24px;
+    --thumb-size: 18px;
+    --switch-padding: 3px;
+}
+
+.switch-theme {
+    position: relative;
+    display: inline-block;
+    width: var(--switch-width);
+    height: var(--switch-height);
+}
+
+.switch-theme input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: var(--switch-height);
+    transition: background-color .4s;
+    padding: var(--switch-padding);
+    box-sizing: border-box;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: var(--thumb-size);
+    width: var(--thumb-size);
+    left: var(--switch-padding);
+    bottom: var(--switch-padding);
+    background-color: var(--color-background);
+    border-radius: 50%;
+    transition: transform .5s, background .2s;
+}
+
+.switch-theme input:checked + .slider::before {
+    transform: translateX(calc(var(--switch-width) - var(--thumb-size) - calc(var(--switch-padding) * 2)));
+    background-color: var(--color-background);
+}
+
+.switch-theme input:checked+.slider {
+    background-color: #9a8af8;
 }

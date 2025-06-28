@@ -1,15 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="José Osorio <josoriovaldes95@gmail.com>">
+    <meta name="description" content="GSeeker - Inspirado en el buscador web más famoso">
+    <meta name="keywords" content="buscador, browser, seeker, búsqueda, web">
+    <meta name="robots" content="index, follow">
+
+    <meta name="theme-color" content="#6C63FF" />
+    <meta name="color-scheme" content="light dark" />
+
+
+    <link rel="icon" href="/assets/svg/favicon.svg" type="image/svg+xml">
     <title>Document</title>
+
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+        href="/css/app-wa-86cd56275caec687041f80b17dc62e32.css?vsn=d">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
-<body>
 
+<body>
+    <header class="flex justify-content-between align-items-center">
+        <label class="switch-theme">
+            <input type="checkbox" id="toggleTheme" />
+            <span class="slider"></span>
+        </label>
+        <nav class="flex justify-content-end">
+            <ul class="nav-list flex justify-content-center align-items-center">
+                <li class="nav-list_item">
+                    <a class="nav-list_item_anchor flex align-items-center" href="#">Gmail</a>
+                </li>
+                <li class="nav-list_item">
+                    <a class="nav-list_item_anchor flex align-items-center" href="#">Imágenes</a>
+                </li>
+                <li class="nav-list_item">
+                    <a class="nav-list_item_anchor flex align-items-center" href="#">
+                        <i class="icon icon-spot nav-icon fa-solid fa-grid"></i>
+                    </a>
+                </li>
+                <li class="nav-list_item">
+                    <a class="nav-list_item_anchor flex align-items-center profile-photo profile-border profile-border--premium"
+                        href="#" class="">
+                        <img src="assets/img/profile.jpg" alt="Profile Photo" class="profile-photo_img">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <script src="js/theme.js"></script>
 </body>
+
 </html>
