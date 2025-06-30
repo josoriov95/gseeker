@@ -5,7 +5,6 @@
 *{
     padding: 0;
     margin: 0;
-    height: 100%
 }
 html{
     font-size: 62.5%;
@@ -14,37 +13,43 @@ html{
 *, *::before, *::after{
     box-sizing: inherit;
 }
+a{
+    color: var(--color-text);
+}
+a:hover{color: var(--color-primary);}
 /*** Variables ***/
 :root {
     --font-primary: 'Roboto', sans-serif;
     --font-title: "Raleway", sans-serif;
     --font-body: "Lexend Deca", sans-serif;
-    --color-primary: #4f32f3;
+    --color-primary: #5c59ff;
     --color-primary-darked: #3f27c5;
     --color-secondary: #50E3C2;
     --color-secondary-darked: #3baa92;
     --color-text: #333333;
     --color-background: #FFFFFF;
-    --color-neutral: #d2d6e2;
+    --color-neutral: #e6e7eed5;
 
+    --xxs: .4rem;
     --xs: .8rem;
     --s: 1.6rem;
-    --m: 2.2rem;
-    --l: 2.8rem;
-    --xl: 3.6rem;
-    --xxl: 4rem;
+    --m: 2rem;
+    --l: 2.6rem;
+    --xl: 3.4rem;
+    --xxl: 3.8rem;
 
     --bar-s: 5rem;
     --bar-m: 7rem;
     --bar-l: 9rem;
 }
 .dark-theme {
-    --color-background: #18181a;
+    --color-background: #1b1b1d;
     --color-text: #eee;
-    --color-primary: #8867ff;
-    --color-primary-darked: #6934fa;
+    --color-primary: #6f3bff;
+    --color-primary-darked: #4f14f3;
     --color-secondary: #03dac6;
     --color-secondary-darked: #1db6a7;
+    --color-neutral: #3c3c42;
 }
 
 /*** Basis ***/
@@ -74,7 +79,7 @@ h3{
     --switch-padding: 3px;
 }
 body{
-    transition: background .3s ease-in, color 5s ease-in;
+    transition: background .3s ease-in, color .2s ease-in;
 }
 .switch-theme {
     position: relative;
@@ -102,6 +107,10 @@ body{
     padding: var(--switch-padding);
     box-sizing: border-box;
 }
+#toggleTheme:checked + .slider {
+    background-color: var(--color-primary);
+}
+
 
 .slider::before {
     content: "";
@@ -114,12 +123,7 @@ body{
     border-radius: 50%;
     transition: transform .5s, background .2s;
 }
-
 #toggleTheme:checked + .slider::before {
     transform: translateX(calc(var(--switch-width) - var(--thumb-size) - calc(var(--switch-padding) * 2)));
     background-color: var(--color-background);
-}
-
-#toggleTheme:checked + .slider {
-    background-color: var(--color-primary);
 }
